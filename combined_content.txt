@@ -1,0 +1,1506 @@
+ 
+================================== 
+FILE: C:\Users\bypas\Desktop\DNP_assignment-master\DNP_assignment-master\Server\ForumMini.sln 
+DATE: 21/10/2025 14:57:47.64 
+================================== 
+ 
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{1A2B3C4D-5E6F-7890-ABCD-EF1234567890}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryContracts", "RepositoryContracts\RepositoryContracts.csproj", "{2B3C4D5E-6F78-9ABC-DEF1-234567890ABC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InMemoryRepositories", "InMemoryRepositories\InMemoryRepositories.csproj", "{3C4D5E6F-7890-ABCD-EF12-34567890ABCD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileRepositories", "FileRepositories\FileRepositories.csproj", "{4D5E6F78-90AB-CDEF-1234-567890ABCDEF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CLI", "CLI\CLI.csproj", "{5E6F7890-ABCD-EF12-3456-7890ABCDEF12}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleDemo", "ConsoleDemo\ConsoleDemo.csproj", "{6F789012-3456-7890-ABCD-EF1234567890}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A2B3C4D-5E6F-7890-ABCD-EF1234567890}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A2B3C4D-5E6F-7890-ABCD-EF1234567890}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A2B3C4D-5E6F-7890-ABCD-EF1234567890}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A2B3C4D-5E6F-7890-ABCD-EF1234567890}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B3C4D5E-6F78-9ABC-DEF1-234567890ABC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B3C4D5E-6F78-9ABC-DEF1-234567890ABC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B3C4D5E-6F78-9ABC-DEF1-234567890ABC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B3C4D5E-6F78-9ABC-DEF1-234567890ABC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C4D5E6F-7890-ABCD-EF12-34567890ABCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C4D5E6F-7890-ABCD-EF12-34567890ABCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C4D5E6F-7890-ABCD-EF12-34567890ABCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C4D5E6F-7890-ABCD-EF12-34567890ABCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D5E6F78-90AB-CDEF-1234-567890ABCDEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D5E6F78-90AB-CDEF-1234-567890ABCDEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D5E6F78-90AB-CDEF-1234-567890ABCDEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D5E6F78-90AB-CDEF-1234-567890ABCDEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E6F7890-ABCD-EF12-3456-7890ABCDEF12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E6F7890-ABCD-EF12-3456-7890ABCDEF12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E6F7890-ABCD-EF12-3456-7890ABCDEF12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E6F7890-ABCD-EF12-3456-7890ABCDEF12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F789012-3456-7890-ABCD-EF1234567890}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F789012-3456-7890-ABCD-EF1234567890}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F789012-3456-7890-ABCD-EF1234567890}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F789012-3456-7890-ABCD-EF1234567890}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {12345678-90AB-CDEF-1234-567890ABCDEF}
+	EndGlobalSection
+EndGlobal 
+ 
+ 
+================================== 
+FILE: C:\Users\bypas\Desktop\DNP_assignment-master\DNP_assignment-master\Server\tu.bat 
+DATE: 21/10/2025 14:57:47.64 
+================================== 
+ 
+@echo off
+setlocal enabledelayedexpansion
+
+:: Set the output file name
+set "outputFile=combined_content.txt"
+
+:: Clear the output file if it exists
+if exist "%outputFile%" del "%outputFile%"
+
+:: Get the current directory
+set "currentDir=%cd%"
+
+echo Starting to combine all file contents...
+echo Output file: %outputFile%
+echo.
+
+:: Initialize counter
+set /a fileCount=0
+
+:: Loop through all files recursively
+for /r %%F in (*) do (
+    :: Skip the output file itself to avoid infinite loop
+    if /i not "%%~nxF"=="%outputFile%" (
+        set /a fileCount+=1
+        
+        echo Processing: %%F
+        
+        :: Add file header to output
+        echo. >> "%outputFile%"
+        echo ================================== >> "%outputFile%"
+        echo FILE: %%F >> "%outputFile%"
+        echo DATE: %date% %time% >> "%outputFile%"
+        echo ================================== >> "%outputFile%"
+        echo. >> "%outputFile%"
+        
+        :: Try to append file content, handle errors gracefully
+        type "%%F" >> "%outputFile%" 2>nul || (
+            echo [ERROR: Could not read file - may be binary or access denied] >> "%outputFile%"
+        )
+        
+        :: Add separator
+        echo. >> "%outputFile%"
+        echo. >> "%outputFile%"
+    )
+)
+
+echo.
+echo Completed! Processed !fileCount! files.
+echo All content has been combined into: %outputFile%
+echo.
+pause 
+ 
+ 
+================================== 
+FILE: C:\Users\bypas\Desktop\DNP_assignment-master\DNP_assignment-master\Server\CLI\CLI.csproj 
+DATE: 21/10/2025 14:57:47.64 
+================================== 
+ 
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>CLI</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Entities\Entities.csproj" />
+    <ProjectReference Include="..\RepositoryContracts\RepositoryContracts.csproj" />
+    <ProjectReference Include="..\FileRepositories\FileRepositories.csproj" />
+  </ItemGroup>
+
+</Project> 
+ 
+ 
+================================== 
+FILE: C:\Users\bypas\Desktop\DNP_assignment-master\DNP_assignment-master\Server\CLI\Program.cs 
+DATE: 21/10/2025 14:57:47.64 
+================================== 
+ 
+using ForumMini.Entities;
+using ForumMini.FileRepositories;
+using ForumMini.RepositoryContracts;
+using CLI.UI;
+
+Console.WriteLine("ForumMini CLI Application");
+Console.WriteLine("========================");
+
+IUserRepository userRepo = new UserFileRepository();
+IPostRepository postRepo = new PostFileRepository();
+ICommentRepository commentRepo = new CommentFileRepository();
+
+var cliApp = new CliApp(userRepo, postRepo, commentRepo);
+await cliApp.StartAsync(); 
+ 
+ 
+================================== 
+FILE: C:\Users\bypas\Desktop\DNP_assignment-master\DNP_assignment-master\Server\CLI\UI\CliApp.cs 
+DATE: 21/10/2025 14:57:47.64 
+================================== 
+ 
+using ForumMini.RepositoryContracts;
+
+namespace CLI.UI;
+
+public class CliApp
+{
+    private readonly IUserRepository _userRepository;
+    private readonly IPostRepository _postRepository;
+    private readonly ICommentRepository _commentRepository;
+    private bool _isRunning = true;
+
+    public CliApp(IUserRepository userRepository, IPostRepository postRepository, ICommentRepository commentRepository)
+    {
+        _userRepository = userRepository;
+        _postRepository = postRepository;
+        _commentRepository = commentRepository;
+    }
+
+    public async Task StartAsync()
+    {
+        Console.WriteLine("\nWelcome to ForumMini CLI!");
+        Console.WriteLine("Type 'help' to see available commands.\n");
+
+        while (_isRunning)
+        {
+            Console.Write("ForumMini> ");
+            string? input = Console.ReadLine();
+            
+            if (string.IsNullOrWhiteSpace(input))
+                continue;
+
+            await ProcessCommandAsync(input.Trim().ToLower());
+        }
+    }
+
+    private async Task ProcessCommandAsync(string command)
+    {
+        try
+        {
+            switch (command)
+            {
+                case "help":
+                    ShowHelp();
+                    break;
+                case "1":
+                case "create-user":
+                    await CreateUserAsync();
+                    break;
+                case "2":
+                case "create-post":
+                    await CreatePostAsync();
+                    break;
+                case "3":
+                case "add-comment":
+                    await AddCommentAsync();
+                    break;
+                case "4":
+                case "list-posts":
+                    await ListPostsAsync();
+                    break;
+                case "5":
+                case "view-post":
+                    await ViewPostAsync();
+                    break;
+                case "6":
+                case "list-users":
+                    await ListUsersAsync();
+                    break;
+                case "7":
+                case "list-comments":
+                    await ListCommentsAsync();
+                    break;
+                case "clear":
+                    Console.Clear();
+                    break;
+                case "exit":
+                case "quit":
+                    _isRunning = false;
+                    Console.WriteLine("Goodbye!");
+                    break;
+                default:
+                    Console.WriteLine("Unknown command. Type 'help' for available commands.");
+                    break;
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+    }
+
+    private void ShowHelp()
+    {
+        Console.WriteLine("\n=== AVAILABLE COMMANDS ===");
+        Console.WriteLine("1 or create-user   - Create a new user");
+        Console.WriteLine("2 or create-post   - Create a new post");
+        Console.WriteLine("3 or add-comment   - Add comment to a post");
+        Console.WriteLine("4 or list-posts    - View all posts overview");
+        Console.WriteLine("5 or view-post     - View specific post with comments");
+        Console.WriteLine("6 or list-users    - View all users");
+        Console.WriteLine("7 or list-comments - View all comments");
+        Console.WriteLine("clear              - Clear the screen");
+        Console.WriteLine("help               - Show this help message");
+        Console.WriteLine("exit or quit       - Exit the application");
+        Console.WriteLine("==========================\n");
+    }
+
+    private async Task CreateUserAsync()
+    {
+        Console.WriteLine("\n=== CREATE NEW USER ===");
+        
+        Console.Write("Enter username: ");
+        string? username = Console.ReadLine();
+        if (string.IsNullOrWhiteSpace(username))
+        {
+            Console.WriteLine("Username cannot be empty.");
+            return;
+        }
+
+        // Check if username already exists
+        var existingUsers = _userRepository.GetMany().Where(u => u.Username.ToLower() == username.ToLower());
+        if (existingUsers.Any())
+        {
+            Console.WriteLine("Username already exists. Please choose a different username.");
+            return;
+        }
+
+        Console.Write("Enter password: ");
+        string? password = Console.ReadLine();
+        if (string.IsNullOrWhiteSpace(password))
+        {
+            Console.WriteLine("Password cannot be empty.");
+            return;
+        }
+
+        var newUser = new ForumMini.Entities.User
+        {
+            Username = username,
+            Password = password
+        };
+
+        var createdUser = await _userRepository.AddAsync(newUser);
+        Console.WriteLine($"User created successfully! ID: {createdUser.Id}, Username: {createdUser.Username}\n");
+    }
+
+    private async Task CreatePostAsync()
+    {
+        Console.WriteLine("\n=== CREATE NEW POST ===");
+        
+        // Show available users
+        var users = _userRepository.GetMany().ToList();
+        if (!users.Any())
+        {
+            Console.WriteLine("No users available. Please create a user first.");
+            return;
+        }
+
+        Console.WriteLine("Available users:");
+        foreach (var user in users)
+        {
+            Console.WriteLine($"  ID: {user.Id} - {user.Username}");
+        }
+
+        Console.Write("Enter user ID: ");
+        if (!int.TryParse(Console.ReadLine(), out int userId))
+        {
+            Console.WriteLine("Invalid user ID.");
+            return;
+        }
+
+        // Verify user exists
+        try
+        {
+            await _userRepository.GetSingleAsync(userId);
+        }
+        catch
+        {
+            Console.WriteLine("User not found.");
+            return;
+        }
+
+        Console.Write("Enter post title: ");
+        string? title = Console.ReadLine();
+        if (string.IsNullOrWhiteSpace(title))
+        {
+            Console.WriteLine("Title cannot be empty.");
+            return;
+        }
+
+        Console.Write("Enter post body: ");
+        string? body = Console.ReadLine();
+        if (string.IsNullOrWhiteSpace(body))
+        {
+            Console.WriteLine("Body cannot be empty.");
+            return;
+        }
+
+        var newPost = new ForumMini.Entities.Post
+        {
+            Title = title,
+            Body = body,
+            UserId = userId
+        };
+
+        var createdPost = await _postRepository.AddAsync(newPost);
+        Console.WriteLine($"Post created successfully! ID: {createdPost.Id}, Title: '{createdPost.Title}'\n");
+    }
+
+    private async Task AddCommentAsync()
+    {
+        Console.WriteLine("\n=== ADD COMMENT ===");
+        
+        // Show available posts
+        var posts = _postRepository.GetMany().ToList();
+        if (!posts.Any())
+        {
+            Console.WriteLine("No posts available. Please create a post first.");
+            return;
+        }
+
+        Console.WriteLine("Available posts:");
+        foreach (var post in posts)
+        {
+            var author = await _userRepository.GetSingleAsync(post.UserId);
+            Console.WriteLine($"  ID: {post.Id} - '{post.Title}' by {author.Username}");
+        }
+
+        Console.Write("Enter post ID: ");
+        if (!int.TryParse(Console.ReadLine(), out int postId))
+        {
+            Console.WriteLine("Invalid post ID.");
+            return;
+        }
+
+        // Verify post exists
+        try
+        {
+            await _postRepository.GetSingleAsync(postId);
+        }
+        catch
+        {
+            Console.WriteLine("Post not found.");
+            return;
+        }
+
+        // Show available users
+        var users = _userRepository.GetMany().ToList();
+        Console.WriteLine("\nAvailable users:");
+        foreach (var user in users)
+        {
+            Console.WriteLine($"  ID: {user.Id} - {user.Username}");
+        }
+
+        Console.Write("Enter user ID: ");
+        if (!int.TryParse(Console.ReadLine(), out int userId))
+        {
+            Console.WriteLine("Invalid user ID.");
+            return;
+        }
+
+        // Verify user exists
+        try
+        {
+            await _userRepository.GetSingleAsync(userId);
+        }
+        catch
+        {
+            Console.WriteLine("User not found.");
+            return;
+        }
+
+        Console.Write("Enter comment: ");
+        string? body = Console.ReadLine();
+        if (string.IsNullOrWhiteSpace(body))
+        {
+            Console.WriteLine("Comment cannot be empty.");
+            return;
+        }
+
+        var newComment = new ForumMini.Entities.Comment
+        {
+            Body = body,
+            UserId = userId,
+            PostId = postId
+        };
+
+        var createdComment = await _commentRepository.AddAsync(newComment);
+        Console.WriteLine($"Comment added successfully! ID: {createdComment.Id}\n");
+    }
+
+    private async Task ListPostsAsync()
+    {
+        Console.WriteLine("\n=== POSTS OVERVIEW ===");
+        var posts = _postRepository.GetMany().ToList();
+        
+        if (!posts.Any())
+        {
+            Console.WriteLine("No posts found.");
+            return;
+        }
+
+        foreach (var post in posts)
+        {
+            var author = await _userRepository.GetSingleAsync(post.UserId);
+            Console.WriteLine($"[{post.Id}] {post.Title} - by {author.Username}");
+        }
+        Console.WriteLine();
+    }
+
+    private async Task ViewPostAsync()
+    {
+        Console.WriteLine("\n=== VIEW POST ===");
+        
+        var posts = _postRepository.GetMany().ToList();
+        if (!posts.Any())
+        {
+            Console.WriteLine("No posts available.");
+            return;
+        }
+
+        Console.WriteLine("Available posts:");
+        foreach (var p in posts)
+        {
+            Console.WriteLine($"  [{p.Id}] {p.Title}");
+        }
+
+        Console.Write("Enter post ID: ");
+        if (!int.TryParse(Console.ReadLine(), out int postId))
+        {
+            Console.WriteLine("Invalid post ID.");
+            return;
+        }
+
+        try
+        {
+            var post = await _postRepository.GetSingleAsync(postId);
+            var author = await _userRepository.GetSingleAsync(post.UserId);
+            
+            Console.WriteLine($"\n--- POST #{post.Id} ---");
+            Console.WriteLine($"Title: {post.Title}");
+            Console.WriteLine($"Author: {author.Username}");
+            Console.WriteLine($"Body: {post.Body}");
+
+            // Show comments
+            var comments = _commentRepository.GetMany().Where(c => c.PostId == postId).ToList();
+            
+            if (comments.Any())
+            {
+                Console.WriteLine("\n--- COMMENTS ---");
+                foreach (var comment in comments)
+                {
+                    var commentAuthor = await _userRepository.GetSingleAsync(comment.UserId);
+                    Console.WriteLine($"[{comment.Id}] {commentAuthor.Username}: {comment.Body}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("\nNo comments on this post.");
+            }
+        }
+        catch
+        {
+            Console.WriteLine("Post not found.");
+        }
+        Console.WriteLine();
+    }
+
+    private async Task ListUsersAsync()
+    {
+        Console.WriteLine("\n=== ALL USERS ===");
+        var users = _userRepository.GetMany().ToList();
+        
+        if (!users.Any())
+        {
+            Console.WriteLine("No users found.");
+            return;
+        }
+
+        foreach (var user in users)
+        {
+            Console.WriteLine($"[{user.Id}] {user.Username}");
+        }
+        Console.WriteLine();
+    }
+
+    private async Task ListCommentsAsync()
+    {
+        Console.WriteLine("\n=== ALL COMMENTS ===");
+        var comments = _commentRepository.GetMany().ToList();
+        
+        if (!comments.Any())
+        {
+            Console.WriteLine("No comments found.");
+            return;
+        }
+
+        foreach (var comment in comments)
+        {
+            var author = await _userRepository.GetSingleAsync(comment.UserId);
+            var post = await _postRepository.GetSingleAsync(comment.PostId);
+            Console.WriteLine($"[{comment.Id}] {author.Username} on '{post.Title}': {comment.Body}");
+        }
+        Console.WriteLine();
+    }
+} 
+ 
+ 
+================================== 
+FILE: C:\Users\bypas\Desktop\DNP_assignment-master\DNP_assignment-master\Server\ConsoleDemo\ConsoleDemo.csproj 
+DATE: 21/10/2025 14:57:47.64 
+================================== 
+ 
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Entities\Entities.csproj" />
+    <ProjectReference Include="..\RepositoryContracts\RepositoryContracts.csproj" />
+    <ProjectReference Include="..\InMemoryRepositories\InMemoryRepositories.csproj" />
+  </ItemGroup>
+
+</Project>
+ 
+ 
+ 
+================================== 
+FILE: C:\Users\bypas\Desktop\DNP_assignment-master\DNP_assignment-master\Server\ConsoleDemo\Program.cs 
+DATE: 21/10/2025 14:57:47.64 
+================================== 
+ 
+﻿using ForumMini.Entities;
+using ForumMini.InMemoryRepositories;
+
+Console.WriteLine("ForumMini Demo - Assignment 1: Entities & Repositories");
+Console.WriteLine("===================================================\n");
+
+// Create repository instances
+var userRepo = new UserInMemoryRepository();
+var postRepo = new PostInMemoryRepository();
+var commentRepo = new CommentInMemoryRepository();
+
+Console.WriteLine("SEED DATA OVERVIEW");
+Console.WriteLine("==================");
+
+// Display all users
+Console.WriteLine("\nUSERS:");
+var users = userRepo.GetMany().ToList();
+foreach (var user in users)
+{
+    Console.WriteLine($"  ID: {user.Id}, Username: {user.Username}");
+}
+
+// Display all posts
+Console.WriteLine("\nPOSTS:");
+var posts = postRepo.GetMany().ToList();
+foreach (var post in posts)
+{
+    var author = await userRepo.GetSingleAsync(post.UserId);
+    Console.WriteLine($"  ID: {post.Id}, Title: '{post.Title}' by {author.Username}");
+    Console.WriteLine($"    Content: {post.Body}");
+}
+
+// Display all comments
+Console.WriteLine("\nCOMMENTS:");
+var comments = commentRepo.GetMany().ToList();
+foreach (var comment in comments)
+{
+    var author = await userRepo.GetSingleAsync(comment.UserId);
+    var post = await postRepo.GetSingleAsync(comment.PostId);
+    Console.WriteLine($"  ID: {comment.Id}, '{comment.Body}' by {author.Username} on post '{post.Title}'");
+}
+
+Console.WriteLine("\n\nCRUD OPERATIONS DEMO");
+Console.WriteLine("====================");
+
+// Create a new user
+Console.WriteLine("\nAdding a new user...");
+var newUser = new User { Username = "johndoe", Password = "secret123" };
+newUser = await userRepo.AddAsync(newUser);
+Console.WriteLine($"Created user: {newUser.Username} (ID: {newUser.Id})");
+
+// Create a new post by the new user
+Console.WriteLine("\nAdding a new post...");
+var newPost = new Post { Title = "My First Post!", Body = "Hello, this is my first post on the forum!", UserId = newUser.Id };
+newPost = await postRepo.AddAsync(newPost);
+Console.WriteLine($"Created post: '{newPost.Title}' (ID: {newPost.Id})");
+
+// Add a comment to the new post
+Console.WriteLine("\nAdding a comment...");
+var newComment = new Comment { Body = "Welcome to the forum!", UserId = 1, PostId = newPost.Id }; // Comment by alice
+newComment = await commentRepo.AddAsync(newComment);
+Console.WriteLine($"Created comment: '{newComment.Body}' (ID: {newComment.Id})");
+
+// Update the post
+Console.WriteLine("\nUpdating the post...");
+newPost.Body = "Hello, this is my first post on the forum! (Updated)";
+await postRepo.UpdateAsync(newPost);
+Console.WriteLine("Updated post content");
+
+// Update the comment
+Console.WriteLine("\nUpdating the comment...");
+newComment.Body = "Welcome to the forum! Hope you enjoy your stay!";
+await commentRepo.UpdateAsync(newComment);
+Console.WriteLine("Updated comment");
+
+// Delete the comment
+Console.WriteLine("\nDeleting the comment...");
+await commentRepo.DeleteAsync(newComment.Id);
+Console.WriteLine($"Deleted comment (ID: {newComment.Id})");
+
+// Demonstrate error handling
+Console.WriteLine("\nERROR HANDLING DEMO");
+Console.WriteLine("===================");
+try
+{
+    await userRepo.GetSingleAsync(999);
+}
+catch (InvalidOperationException ex)
+{
+    Console.WriteLine($"Caught expected error: {ex.Message}");
+}
+
+try
+{
+    await userRepo.DeleteAsync(999);
+}
+catch (InvalidOperationException ex)
+{
+    Console.WriteLine($"Caught expected error: {ex.Message}");
+}
+
+Console.WriteLine("\n\nDemo completed successfully!");
+Console.WriteLine("You can now build upon this foundation for future assignments.");
+Console.WriteLine("Next steps: CLI interface, Web API, or EF Core integration.");
+ 
+ 
+ 
+================================== 
+FILE: C:\Users\bypas\Desktop\DNP_assignment-master\DNP_assignment-master\Server\Entities\Comment.cs 
+DATE: 21/10/2025 14:57:47.64 
+================================== 
+ 
+namespace ForumMini.Entities;
+
+public class Comment
+{
+    public int Id { get; set; }
+    public string Body { get; set; } = string.Empty;
+    public int UserId { get; set; }
+    public int PostId { get; set; }
+}
+ 
+ 
+ 
+================================== 
+FILE: C:\Users\bypas\Desktop\DNP_assignment-master\DNP_assignment-master\Server\Entities\Entities.csproj 
+DATE: 21/10/2025 14:57:47.64 
+================================== 
+ 
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>ForumMini.Entities</RootNamespace>
+  </PropertyGroup>
+
+</Project>
+ 
+ 
+ 
+================================== 
+FILE: C:\Users\bypas\Desktop\DNP_assignment-master\DNP_assignment-master\Server\Entities\Post.cs 
+DATE: 21/10/2025 14:57:47.64 
+================================== 
+ 
+namespace ForumMini.Entities;
+
+public class Post
+{
+    public int Id { get; set; }
+    public string Title { get; set; } = string.Empty;
+    public string Body { get; set; } = string.Empty;
+    public int UserId { get; set; }
+}
+ 
+ 
+ 
+================================== 
+FILE: C:\Users\bypas\Desktop\DNP_assignment-master\DNP_assignment-master\Server\Entities\User.cs 
+DATE: 21/10/2025 14:57:47.64 
+================================== 
+ 
+namespace ForumMini.Entities;
+
+public class User
+{
+    public int Id { get; set; }
+    public string Username { get; set; } = string.Empty;
+    public string Password { get; set; } = string.Empty;
+}
+ 
+ 
+ 
+================================== 
+FILE: C:\Users\bypas\Desktop\DNP_assignment-master\DNP_assignment-master\Server\FileRepositories\CommentFileRepository.cs 
+DATE: 21/10/2025 14:57:47.64 
+================================== 
+ 
+using System.Text.Json;
+using ForumMini.Entities;
+using ForumMini.RepositoryContracts;
+
+namespace ForumMini.FileRepositories;
+
+public class CommentFileRepository : ICommentRepository
+{
+    private readonly string filePath = "comments.json";
+
+    public CommentFileRepository()
+    {
+        if (!File.Exists(filePath))
+        {
+            File.WriteAllText(filePath, "[]");
+        }
+    }
+
+    public async Task<Comment> AddAsync(Comment comment)
+    {
+        List<Comment> comments = await LoadCommentsAsync();
+        int maxId = comments.Count > 0 ? comments.Max(c => c.Id) : 0;
+        comment.Id = maxId + 1;
+        comments.Add(comment);
+        await SaveCommentsAsync(comments);
+        return comment;
+    }
+
+    public async Task UpdateAsync(Comment comment)
+    {
+        List<Comment> comments = await LoadCommentsAsync();
+        Comment? existingComment = comments.SingleOrDefault(c => c.Id == comment.Id);
+        if (existingComment is null)
+        {
+            throw new InvalidOperationException($"Comment with ID '{comment.Id}' not found");
+        }
+
+        comments.Remove(existingComment);
+        comments.Add(comment);
+        await SaveCommentsAsync(comments);
+    }
+
+    public async Task DeleteAsync(int id)
+    {
+        List<Comment> comments = await LoadCommentsAsync();
+        Comment? commentToRemove = comments.SingleOrDefault(c => c.Id == id);
+        if (commentToRemove is null)
+        {
+            throw new InvalidOperationException($"Comment with ID '{id}' not found");
+        }
+
+        comments.Remove(commentToRemove);
+        await SaveCommentsAsync(comments);
+    }
+
+    public async Task<Comment> GetSingleAsync(int id)
+    {
+        List<Comment> comments = await LoadCommentsAsync();
+        Comment? comment = comments.SingleOrDefault(c => c.Id == id);
+        if (comment is null)
+        {
+            throw new InvalidOperationException($"Comment with ID '{id}' not found");
+        }
+        return comment;
+    }
+
+    public IQueryable<Comment> GetMany()
+    {
+        string commentsAsJson = File.ReadAllTextAsync(filePath).Result;
+        List<Comment> comments = JsonSerializer.Deserialize<List<Comment>>(commentsAsJson)!;
+        return comments.AsQueryable();
+    }
+
+    private async Task<List<Comment>> LoadCommentsAsync()
+    {
+        string commentsAsJson = await File.ReadAllTextAsync(filePath);
+        return JsonSerializer.Deserialize<List<Comment>>(commentsAsJson)!;
+    }
+
+    private async Task SaveCommentsAsync(List<Comment> comments)
+    {
+        string commentsAsJson = JsonSerializer.Serialize(comments);
+        await File.WriteAllTextAsync(filePath, commentsAsJson);
+    }
+} 
+ 
+ 
+================================== 
+FILE: C:\Users\bypas\Desktop\DNP_assignment-master\DNP_assignment-master\Server\FileRepositories\FileRepositories.csproj 
+DATE: 21/10/2025 14:57:47.64 
+================================== 
+ 
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>ForumMini.FileRepositories</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Entities\Entities.csproj" />
+    <ProjectReference Include="..\RepositoryContracts\RepositoryContracts.csproj" />
+  </ItemGroup>
+
+</Project> 
+ 
+ 
+================================== 
+FILE: C:\Users\bypas\Desktop\DNP_assignment-master\DNP_assignment-master\Server\FileRepositories\PostFileRepository.cs 
+DATE: 21/10/2025 14:57:47.64 
+================================== 
+ 
+using System.Text.Json;
+using ForumMini.Entities;
+using ForumMini.RepositoryContracts;
+
+namespace ForumMini.FileRepositories;
+
+public class PostFileRepository : IPostRepository
+{
+    private readonly string filePath = "posts.json";
+
+    public PostFileRepository()
+    {
+        if (!File.Exists(filePath))
+        {
+            File.WriteAllText(filePath, "[]");
+        }
+    }
+
+    public async Task<Post> AddAsync(Post post)
+    {
+        List<Post> posts = await LoadPostsAsync();
+        int maxId = posts.Count > 0 ? posts.Max(p => p.Id) : 0;
+        post.Id = maxId + 1;
+        posts.Add(post);
+        await SavePostsAsync(posts);
+        return post;
+    }
+
+    public async Task UpdateAsync(Post post)
+    {
+        List<Post> posts = await LoadPostsAsync();
+        Post? existingPost = posts.SingleOrDefault(p => p.Id == post.Id);
+        if (existingPost is null)
+        {
+            throw new InvalidOperationException($"Post with ID '{post.Id}' not found");
+        }
+
+        posts.Remove(existingPost);
+        posts.Add(post);
+        await SavePostsAsync(posts);
+    }
+
+    public async Task DeleteAsync(int id)
+    {
+        List<Post> posts = await LoadPostsAsync();
+        Post? postToRemove = posts.SingleOrDefault(p => p.Id == id);
+        if (postToRemove is null)
+        {
+            throw new InvalidOperationException($"Post with ID '{id}' not found");
+        }
+
+        posts.Remove(postToRemove);
+        await SavePostsAsync(posts);
+    }
+
+    public async Task<Post> GetSingleAsync(int id)
+    {
+        List<Post> posts = await LoadPostsAsync();
+        Post? post = posts.SingleOrDefault(p => p.Id == id);
+        if (post is null)
+        {
+            throw new InvalidOperationException($"Post with ID '{id}' not found");
+        }
+        return post;
+    }
+
+    public IQueryable<Post> GetMany()
+    {
+        string postsAsJson = File.ReadAllTextAsync(filePath).Result;
+        List<Post> posts = JsonSerializer.Deserialize<List<Post>>(postsAsJson)!;
+        return posts.AsQueryable();
+    }
+
+    private async Task<List<Post>> LoadPostsAsync()
+    {
+        string postsAsJson = await File.ReadAllTextAsync(filePath);
+        return JsonSerializer.Deserialize<List<Post>>(postsAsJson)!;
+    }
+
+    private async Task SavePostsAsync(List<Post> posts)
+    {
+        string postsAsJson = JsonSerializer.Serialize(posts);
+        await File.WriteAllTextAsync(filePath, postsAsJson);
+    }
+} 
+ 
+ 
+================================== 
+FILE: C:\Users\bypas\Desktop\DNP_assignment-master\DNP_assignment-master\Server\FileRepositories\UserFileRepository.cs 
+DATE: 21/10/2025 14:57:47.64 
+================================== 
+ 
+using System.Text.Json;
+using ForumMini.Entities;
+using ForumMini.RepositoryContracts;
+
+namespace ForumMini.FileRepositories;
+
+public class UserFileRepository : IUserRepository
+{
+    private readonly string filePath = "users.json";
+
+    public UserFileRepository()
+    {
+        if (!File.Exists(filePath))
+        {
+            File.WriteAllText(filePath, "[]");
+        }
+    }
+
+    public async Task<User> AddAsync(User user)
+    {
+        List<User> users = await LoadUsersAsync();
+        int maxId = users.Count > 0 ? users.Max(u => u.Id) : 0;
+        user.Id = maxId + 1;
+        users.Add(user);
+        await SaveUsersAsync(users);
+        return user;
+    }
+
+    public async Task UpdateAsync(User user)
+    {
+        List<User> users = await LoadUsersAsync();
+        User? existingUser = users.SingleOrDefault(u => u.Id == user.Id);
+        if (existingUser is null)
+        {
+            throw new InvalidOperationException($"User with ID '{user.Id}' not found");
+        }
+
+        users.Remove(existingUser);
+        users.Add(user);
+        await SaveUsersAsync(users);
+    }
+
+    public async Task DeleteAsync(int id)
+    {
+        List<User> users = await LoadUsersAsync();
+        User? userToRemove = users.SingleOrDefault(u => u.Id == id);
+        if (userToRemove is null)
+        {
+            throw new InvalidOperationException($"User with ID '{id}' not found");
+        }
+
+        users.Remove(userToRemove);
+        await SaveUsersAsync(users);
+    }
+
+    public async Task<User> GetSingleAsync(int id)
+    {
+        List<User> users = await LoadUsersAsync();
+        User? user = users.SingleOrDefault(u => u.Id == id);
+        if (user is null)
+        {
+            throw new InvalidOperationException($"User with ID '{id}' not found");
+        }
+        return user;
+    }
+
+    public IQueryable<User> GetMany()
+    {
+        string usersAsJson = File.ReadAllTextAsync(filePath).Result;
+        List<User> users = JsonSerializer.Deserialize<List<User>>(usersAsJson)!;
+        return users.AsQueryable();
+    }
+
+    private async Task<List<User>> LoadUsersAsync()
+    {
+        string usersAsJson = await File.ReadAllTextAsync(filePath);
+        return JsonSerializer.Deserialize<List<User>>(usersAsJson)!;
+    }
+
+    private async Task SaveUsersAsync(List<User> users)
+    {
+        string usersAsJson = JsonSerializer.Serialize(users);
+        await File.WriteAllTextAsync(filePath, usersAsJson);
+    }
+} 
+ 
+ 
+================================== 
+FILE: C:\Users\bypas\Desktop\DNP_assignment-master\DNP_assignment-master\Server\InMemoryRepositories\CommentInMemoryRepository.cs 
+DATE: 21/10/2025 14:57:47.64 
+================================== 
+ 
+using ForumMini.Entities;
+using ForumMini.RepositoryContracts;
+
+namespace ForumMini.InMemoryRepositories;
+
+/// <summary>
+/// In-memory implementation of ICommentRepository
+/// </summary>
+public class CommentInMemoryRepository : ICommentRepository
+{
+    private readonly List<Comment> _comments = new();
+
+    public CommentInMemoryRepository()
+    {
+        // Seed data
+        _comments.Add(new Comment { Id = 1, Body = "Great first post!", UserId = 2, PostId = 1 });
+        _comments.Add(new Comment { Id = 2, Body = "I agree completely.", UserId = 3, PostId = 1 });
+        _comments.Add(new Comment { Id = 3, Body = "Thanks for sharing.", UserId = 1, PostId = 2 });
+        _comments.Add(new Comment { Id = 4, Body = "Interesting perspective.", UserId = 2, PostId = 3 });
+    }
+
+    public Task<Comment> AddAsync(Comment comment)
+    {
+        comment.Id = _comments.Any()
+            ? _comments.Max(c => c.Id) + 1
+            : 1;
+        _comments.Add(comment);
+        return Task.FromResult(comment);
+    }
+
+    public Task UpdateAsync(Comment comment)
+    {
+        Comment? existingComment = _comments.SingleOrDefault(c => c.Id == comment.Id);
+        if (existingComment is null)
+        {
+            throw new InvalidOperationException($"Comment with ID '{comment.Id}' not found");
+        }
+
+        _comments.Remove(existingComment);
+        _comments.Add(comment);
+
+        return Task.CompletedTask;
+    }
+
+    public Task DeleteAsync(int id)
+    {
+        Comment? commentToRemove = _comments.SingleOrDefault(c => c.Id == id);
+        if (commentToRemove is null)
+        {
+            throw new InvalidOperationException($"Comment with ID '{id}' not found");
+        }
+
+        _comments.Remove(commentToRemove);
+        return Task.CompletedTask;
+    }
+
+    public Task<Comment> GetSingleAsync(int id)
+    {
+        Comment? comment = _comments.SingleOrDefault(c => c.Id == id);
+        if (comment is null)
+        {
+            throw new InvalidOperationException($"Comment with ID '{id}' not found");
+        }
+        return Task.FromResult(comment);
+    }
+
+    public IQueryable<Comment> GetMany()
+    {
+        return _comments.AsQueryable();
+    }
+} 
+ 
+ 
+================================== 
+FILE: C:\Users\bypas\Desktop\DNP_assignment-master\DNP_assignment-master\Server\InMemoryRepositories\InMemoryRepositories.csproj 
+DATE: 21/10/2025 14:57:47.64 
+================================== 
+ 
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>ForumMini.InMemoryRepositories</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Entities\Entities.csproj" />
+    <ProjectReference Include="..\RepositoryContracts\RepositoryContracts.csproj" />
+  </ItemGroup>
+
+</Project>
+ 
+ 
+ 
+================================== 
+FILE: C:\Users\bypas\Desktop\DNP_assignment-master\DNP_assignment-master\Server\InMemoryRepositories\PostInMemoryRepository.cs 
+DATE: 21/10/2025 14:57:47.64 
+================================== 
+ 
+using ForumMini.Entities;
+using ForumMini.RepositoryContracts;
+
+namespace ForumMini.InMemoryRepositories;
+
+/// <summary>
+/// In-memory implementation of IPostRepository
+/// </summary>
+public class PostInMemoryRepository : IPostRepository
+{
+    private readonly List<Post> _posts = new();
+
+    public PostInMemoryRepository()
+    {
+        // Seed data
+        _posts.Add(new Post { Id = 1, Title = "Welcome to the forum!", Body = "This is our first post.", UserId = 1 });
+        _posts.Add(new Post { Id = 2, Title = "Second post", Body = "Just testing things out.", UserId = 2 });
+        _posts.Add(new Post { Id = 3, Title = "Another post", Body = "Content is king.", UserId = 1 });
+    }
+
+    public Task<Post> AddAsync(Post post)
+    {
+        post.Id = _posts.Any()
+            ? _posts.Max(p => p.Id) + 1
+            : 1;
+        _posts.Add(post);
+        return Task.FromResult(post);
+    }
+
+    public Task UpdateAsync(Post post)
+    {
+        Post? existingPost = _posts.SingleOrDefault(p => p.Id == post.Id);
+        if (existingPost is null)
+        {
+            throw new InvalidOperationException($"Post with ID '{post.Id}' not found");
+        }
+
+        _posts.Remove(existingPost);
+        _posts.Add(post);
+
+        return Task.CompletedTask;
+    }
+
+    public Task DeleteAsync(int id)
+    {
+        Post? postToRemove = _posts.SingleOrDefault(p => p.Id == id);
+        if (postToRemove is null)
+        {
+            throw new InvalidOperationException($"Post with ID '{id}' not found");
+        }
+
+        _posts.Remove(postToRemove);
+        return Task.CompletedTask;
+    }
+
+    public Task<Post> GetSingleAsync(int id)
+    {
+        Post? post = _posts.SingleOrDefault(p => p.Id == id);
+        if (post is null)
+        {
+            throw new InvalidOperationException($"Post with ID '{id}' not found");
+        }
+        return Task.FromResult(post);
+    }
+
+    public IQueryable<Post> GetMany()
+    {
+        return _posts.AsQueryable();
+    }
+}
+ 
+ 
+ 
+================================== 
+FILE: C:\Users\bypas\Desktop\DNP_assignment-master\DNP_assignment-master\Server\InMemoryRepositories\UserInMemoryRepository.cs 
+DATE: 21/10/2025 14:57:47.64 
+================================== 
+ 
+using ForumMini.Entities;
+using ForumMini.RepositoryContracts;
+
+namespace ForumMini.InMemoryRepositories;
+
+/// <summary>
+/// In-memory implementation of IUserRepository
+/// </summary>
+public class UserInMemoryRepository : IUserRepository
+{
+    private readonly List<User> _users = new();
+
+    public UserInMemoryRepository()
+    {
+        // Seed data
+        _users.Add(new User { Id = 1, Username = "alice", Password = "password123" });
+        _users.Add(new User { Id = 2, Username = "bob", Password = "password123" });
+        _users.Add(new User { Id = 3, Username = "charlie", Password = "password123" });
+    }
+
+    public Task<User> AddAsync(User user)
+    {
+        user.Id = _users.Any()
+            ? _users.Max(u => u.Id) + 1
+            : 1;
+        _users.Add(user);
+        return Task.FromResult(user);
+    }
+
+    public Task UpdateAsync(User user)
+    {
+        User? existingUser = _users.SingleOrDefault(u => u.Id == user.Id);
+        if (existingUser is null)
+        {
+            throw new InvalidOperationException($"User with ID '{user.Id}' not found");
+        }
+
+        _users.Remove(existingUser);
+        _users.Add(user);
+
+        return Task.CompletedTask;
+    }
+
+    public Task DeleteAsync(int id)
+    {
+        User? userToRemove = _users.SingleOrDefault(u => u.Id == id);
+        if (userToRemove is null)
+        {
+            throw new InvalidOperationException($"User with ID '{id}' not found");
+        }
+
+        _users.Remove(userToRemove);
+        return Task.CompletedTask;
+    }
+
+    public Task<User> GetSingleAsync(int id)
+    {
+        User? user = _users.SingleOrDefault(u => u.Id == id);
+        if (user is null)
+        {
+            throw new InvalidOperationException($"User with ID '{id}' not found");
+        }
+        return Task.FromResult(user);
+    }
+
+    public IQueryable<User> GetMany()
+    {
+        return _users.AsQueryable();
+    }
+}
+ 
+ 
+ 
+================================== 
+FILE: C:\Users\bypas\Desktop\DNP_assignment-master\DNP_assignment-master\Server\RepositoryContracts\ICommentRepository.cs 
+DATE: 21/10/2025 14:57:47.64 
+================================== 
+ 
+using System.Linq;
+using ForumMini.Entities;
+
+namespace ForumMini.RepositoryContracts;
+
+/// <summary>
+/// Repository interface for Comment entities
+/// </summary>
+public interface ICommentRepository
+{
+    /// <summary>
+    /// Adds a new comment asynchronously
+    /// </summary>
+    /// <param name="comment">The comment to add</param>
+    /// <returns>The added comment with assigned ID</returns>
+    Task<Comment> AddAsync(Comment comment);
+
+    /// <summary>
+    /// Updates an existing comment asynchronously
+    /// </summary>
+    /// <param name="comment">The comment to update</param>
+    Task UpdateAsync(Comment comment);
+
+    /// <summary>
+    /// Deletes a comment by ID asynchronously
+    /// </summary>
+    /// <param name="id">The ID of the comment to delete</param>
+    Task DeleteAsync(int id);
+
+    /// <summary>
+    /// Gets a single comment by ID asynchronously
+    /// </summary>
+    /// <param name="id">The ID of the comment to retrieve</param>
+    /// <returns>The comment with the specified ID</returns>
+    Task<Comment> GetSingleAsync(int id);
+
+    /// <summary>
+    /// Gets all comments as a queryable collection
+    /// </summary>
+    /// <returns>An IQueryable of all comments</returns>
+    IQueryable<Comment> GetMany();
+} 
+ 
+ 
+================================== 
+FILE: C:\Users\bypas\Desktop\DNP_assignment-master\DNP_assignment-master\Server\RepositoryContracts\IPostRepository.cs 
+DATE: 21/10/2025 14:57:47.64 
+================================== 
+ 
+using System.Linq;
+using ForumMini.Entities;
+
+namespace ForumMini.RepositoryContracts;
+
+/// <summary>
+/// Repository interface for Post entities
+/// </summary>
+public interface IPostRepository
+{
+    /// <summary>
+    /// Adds a new post asynchronously
+    /// </summary>
+    /// <param name="post">The post to add</param>
+    /// <returns>The added post with assigned ID</returns>
+    Task<Post> AddAsync(Post post);
+
+    /// <summary>
+    /// Updates an existing post asynchronously
+    /// </summary>
+    /// <param name="post">The post to update</param>
+    Task UpdateAsync(Post post);
+
+    /// <summary>
+    /// Deletes a post by ID asynchronously
+    /// </summary>
+    /// <param name="id">The ID of the post to delete</param>
+    Task DeleteAsync(int id);
+
+    /// <summary>
+    /// Gets a single post by ID asynchronously
+    /// </summary>
+    /// <param name="id">The ID of the post to retrieve</param>
+    /// <returns>The post with the specified ID</returns>
+    Task<Post> GetSingleAsync(int id);
+
+    /// <summary>
+    /// Gets all posts as a queryable collection
+    /// </summary>
+    /// <returns>An IQueryable of all posts</returns>
+    IQueryable<Post> GetMany();
+}
+ 
+ 
+ 
+================================== 
+FILE: C:\Users\bypas\Desktop\DNP_assignment-master\DNP_assignment-master\Server\RepositoryContracts\IUserRepository.cs 
+DATE: 21/10/2025 14:57:47.64 
+================================== 
+ 
+using System.Linq;
+using ForumMini.Entities;
+
+namespace ForumMini.RepositoryContracts;
+
+/// <summary>
+/// Repository interface for User entities
+/// </summary>
+public interface IUserRepository
+{
+    /// <summary>
+    /// Adds a new user asynchronously
+    /// </summary>
+    /// <param name="user">The user to add</param>
+    /// <returns>The added user with assigned ID</returns>
+    Task<User> AddAsync(User user);
+
+    /// <summary>
+    /// Updates an existing user asynchronously
+    /// </summary>
+    /// <param name="user">The user to update</param>
+    Task UpdateAsync(User user);
+
+    /// <summary>
+    /// Deletes a user by ID asynchronously
+    /// </summary>
+    /// <param name="id">The ID of the user to delete</param>
+    Task DeleteAsync(int id);
+
+    /// <summary>
+    /// Gets a single user by ID asynchronously
+    /// </summary>
+    /// <param name="id">The ID of the user to retrieve</param>
+    /// <returns>The user with the specified ID</returns>
+    Task<User> GetSingleAsync(int id);
+
+    /// <summary>
+    /// Gets all users as a queryable collection
+    /// </summary>
+    /// <returns>An IQueryable of all users</returns>
+    IQueryable<User> GetMany();
+}
+ 
+ 
+ 
+================================== 
+FILE: C:\Users\bypas\Desktop\DNP_assignment-master\DNP_assignment-master\Server\RepositoryContracts\RepositoryContracts.csproj 
+DATE: 21/10/2025 14:57:47.64 
+================================== 
+ 
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>ForumMini.RepositoryContracts</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Entities\Entities.csproj" />
+  </ItemGroup>
+
+</Project>
+ 
+ 
